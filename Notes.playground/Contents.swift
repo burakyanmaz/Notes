@@ -43,5 +43,19 @@ let productList = ["macbook", "ipad", "iphone"].customMap { "Apple" + $0 }
 
 //: MARK - max and min function
 
+let lon:Double = 2.29
+let lat:Double = 47.85
+
+let latRange = (-90.0, 90.0)
+let lonRange = (-180.0, 180.0)
+
+let minLon = max(lon - 1, lonRange.0)
+let minLat = max(lat - 1, latRange.0)
+
+let maxLon = min(lon + 1, lonRange.1)
+let maxLat = min(lat + 1, latRange.1)
+
+print(minLon, minLat, maxLon, maxLat)
+
 
 
